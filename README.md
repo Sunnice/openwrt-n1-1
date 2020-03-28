@@ -16,8 +16,8 @@ Build OpenWrt using GitHub Actions
 - When the build is complete, click the `Artifacts` button in the upper right corner of the Actions page to download the binaries.
 
 
-##斐讯N1 / 贝壳云 一键制作OpenWrt镜像脚本 https://github.com/tuanqing/mknop
-Usage
+## 斐讯N1 / 贝壳云 一键制作OpenWrt镜像脚本 https://github.com/tuanqing/mknop
+使用方法：
 编译, 不会的可以去 Lean's OpenWrt Source
 target选 "QEMU ARM Virtual Machine" > "ARMv8 multiplatform"
 将编译好的固件放入到"openwrt"目录

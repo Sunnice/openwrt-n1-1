@@ -1,22 +1,5 @@
-# Actions-OpenWrt
 
-[![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/P3TERX/Actions-OpenWrt/blob/master/LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Stars&logo=github)](https://github.com/P3TERX/Actions-OpenWrt/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Forks&logo=github)](https://github.com/P3TERX/Actions-OpenWrt/fork)
-
-Build OpenWrt using GitHub Actions
-
-[Read the details in my blog (in Chinese) | 中文教程](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
-
-## Usage
-
-- Click the [Use this template](https://github.com/P3TERX/Actions-OpenWrt/generate) button to create a new repository.
-- Generate `.config` files using [Lean's OpenWrt](https://github.com/coolsnowwolf/lede) source code. ( You can change it through environment variables in the workflow file. )
-- Push `.config` file to the GitHub repository, and the build starts automatically.Progress can be viewed on the Actions page.
-- When the build is complete, click the `Artifacts` button in the upper right corner of the Actions page to download the binaries.
-
-
-## --openwrt原始为QEMU镜像--简单,但没有无线--斐讯N1 / 贝壳云 一键制作OpenWrt镜像脚本 https://github.com/tuanqing/mknop
+## 方法一：--openwrt原始为QEMU镜像--简单,但没有无线--斐讯N1 / 贝壳云 一键制作OpenWrt镜像脚本 https://github.com/tuanqing/mknop
 使用方法：
 编译, 不会的可以去 Lean's OpenWrt Source
 target选 "QEMU ARM Virtual Machine" > "ARMv8 multiplatform"
@@ -26,7 +9,7 @@ target选 "QEMU ARM Virtual Machine" > "ARMv8 multiplatform"
 写入U盘 / 线刷 启动OpenWrt
 
 
-## --openwrt原始为BCM27xxRaspP_复杂，有无线--斐讯N1盒子OpenWRT镜像自动构建脚本 https://github.com/sean-liang/PHICOMM-N1-OpenWRT-Image-Builder
+## 方法二：--openwrt原始为BCM27xxRaspP_复杂，有无线--斐讯N1盒子OpenWRT镜像自动构建脚本 https://github.com/sean-liang/PHICOMM-N1-OpenWRT-Image-Builder
 ### 使用方法：
 git clone https://github.com/sean-liang/PHICOMM-N1-OpenWRT-Image-Builder.git
 准备支持N1盒子的Armbian镜像，放入当前目录，建议重命名为armbian.img

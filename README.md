@@ -6,6 +6,7 @@
 编译目标选择（1）：qemu    （不带无线驱动）
 * target选 'QEMU ARM Virtual Machine' > 'ARMv8 multiplatform'
 * `Target Image`需要勾选`ext4`
+
 ***target image rootfs根分区大小建议320MB。如果设置为256MB以下可能因为空间不够而编译失败！）***
 
 编译目标选择（2）：RasPi3B+（带有无线驱动）

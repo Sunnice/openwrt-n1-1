@@ -1,15 +1,27 @@
 
-## 方法一：--openwrt原始为QEMU镜像--简单,但没有无线--斐讯N1 / 贝壳云 一键制作OpenWrt镜像脚本 https://github.com/tuanqing/mknop
+## 方法一：--openwrt原始为QEMU镜像--简单,但没有无线--
+斐讯N1 / 贝壳云 一键制作OpenWrt镜像脚本 https://github.com/tuanqing/mknop
 使用方法：
-编译, 不会的可以去 Lean's OpenWrt Source
+
+###编译目标选择（1）：qemu    （不带无线驱动）
 target选 "QEMU ARM Virtual Machine" > "ARMv8 multiplatform"
+***target image rootfs根分区大小建议320MB。如果设置为256MB以下可能因为空间不够而编译失败！）***
+
+###编译目标选择（2）：RasPi3B+（带有无线驱动）
+* `Target System`选择`Broadcom BCM27xx`，`Subtarget`选择`BCM2710 boards (64 bit)`，`Target Profile`选择`Raspberry Pi 2B-1.2/3B/3B+/3CM`
+* `Target Image`需要勾选`ext4`
+***target image rootfs根分区大小建议320MB。如果设置为256MB以下可能因为空间不够而编译失败！）***
+
 将编译好的固件放入到"openwrt"目录
 注意: 固件格式只支持 " *rootfs.tar.gz "、" *ext4-factory.img[.gz] "、" *root.ext4[.gz] "
 执行bash mk.sh, 默认输出路径"out/xxx.img"
 写入U盘 / 线刷 启动OpenWrt
 
 
-## 方法二：--openwrt原始为BCM27xxRaspP_复杂，有无线--斐讯N1盒子OpenWRT镜像自动构建脚本 https://github.com/sean-liang/PHICOMM-N1-OpenWRT-Image-Builder
+
+
+## 方法二：--openwrt BCM27xxRaspP,较为复杂，有无线--
+斐讯N1盒子OpenWRT镜像自动构建脚本 https://github.com/sean-liang/PHICOMM-N1-OpenWRT-Image-Builder
 ### 使用方法：
 git clone https://github.com/sean-liang/PHICOMM-N1-OpenWRT-Image-Builder.git
 准备支持N1盒子的Armbian镜像，放入当前目录，建议重命名为armbian.img

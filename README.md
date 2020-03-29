@@ -20,12 +20,11 @@
 执行bash mk.sh, 默认输出路径"out/xxx.img"
 写入U盘 / 线刷 启动OpenWrt
 
-* 写入N1的emmc方法：
-u盘启动openwrt后，执行df -h查看u盘和emmc分区的挂载，然后将u盘分区的内容复制到emmc分区
+* 写入N1的emmc方法：u盘启动openwrt后，执行df -h查看u盘和emmc分区的挂载，然后将u盘分区的内容复制到emmc分区
 
-df -h #看u盘的root分区 (/mnt/sda2),  mmc的root分区（/mnt/mmcblk1p2）
-rm -rf /mnt/mmcblk1p2/*
-cp -a /mnt/sda2/* /mnt/mmcblk1p2/
+* df -h #看u盘的root分区 (/mnt/sda2),  mmc的root分区（/mnt/mmcblk1p2）
+* rm -rf /mnt/mmcblk1p2/*
+* cp -a /mnt/sda2/* /mnt/mmcblk1p2/
 
 参考：[N1盒子] 【2019-09-05更新】贝壳云 / N1一键制作OpenWrt镜像脚本 <=> 定制你的专属固件
 https://www.right.com.cn/forum/thread-777305-1-1.html 1楼和16楼

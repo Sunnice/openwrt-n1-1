@@ -20,8 +20,7 @@
 执行bash mk.sh, 默认输出路径"out/xxx.img"
 写入U盘 / 线刷 启动OpenWrt
 
-
-写入N1的emmc方法：
+*写入N1的emmc方法：
 u盘启动openwrt后，执行df -h查看u盘和emmc分区的挂载，然后将u盘分区的内容复制到emmc分区
 
 df -h #看u盘的root分区 (/mnt/sda2),  mmc的root分区（/mnt/mmcblk1p2）

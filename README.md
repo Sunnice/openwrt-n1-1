@@ -3,12 +3,12 @@
 斐讯N1 / 贝壳云 一键制作OpenWrt镜像脚本 https://github.com/tuanqing/mknop
 使用方法：
 
-###编译目标选择（1）：qemu    （不带无线驱动）
+编译目标选择（1）：qemu    （不带无线驱动）
 * target选 'QEMU ARM Virtual Machine' > 'ARMv8 multiplatform'
 * `Target Image`需要勾选`ext4`
 ***target image rootfs根分区大小建议320MB。如果设置为256MB以下可能因为空间不够而编译失败！）***
 
-###编译目标选择（2）：RasPi3B+（带有无线驱动）
+编译目标选择（2）：RasPi3B+（带有无线驱动）
 * `Target System`选择`Broadcom BCM27xx`，`Subtarget`选择`BCM2710 boards (64 bit)`，`Target Profile`选择`Raspberry Pi 2B-1.2/3B/3B+/3CM`
 * `Target Image`需要勾选`ext4`
 

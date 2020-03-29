@@ -1,5 +1,5 @@
 
-## 方法一：--openwrt原始为QEMU镜像--简单,但没有无线--
+## 方法一：--openwrt原始为QEMU镜像--简单（可选无线）--
 斐讯N1 / 贝壳云 一键制作OpenWrt镜像脚本 https://github.com/tuanqing/mknop
 使用方法：
 

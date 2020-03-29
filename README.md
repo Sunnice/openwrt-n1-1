@@ -10,6 +10,7 @@ target选 "QEMU ARM Virtual Machine" > "ARMv8 multiplatform"
 ###编译目标选择（2）：RasPi3B+（带有无线驱动）
 * `Target System`选择`Broadcom BCM27xx`，`Subtarget`选择`BCM2710 boards (64 bit)`，`Target Profile`选择`Raspberry Pi 2B-1.2/3B/3B+/3CM`
 * `Target Image`需要勾选`ext4`
+
 ***target image rootfs根分区大小建议320MB。如果设置为256MB以下可能因为空间不够而编译失败！）***
 
 将编译好的固件放入到"openwrt"目录

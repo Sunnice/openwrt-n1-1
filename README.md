@@ -29,7 +29,7 @@
 nand-sata-install
 命令将U盘的armbian5.77写入N1的emmc内。
 
-u盘启动openwrt后，执行df -h查看u盘和emmc分区的挂载，然后将u盘分区的内容复制到emmc分区
+N1的emmc中布局为armbian的情况下，用u盘openwrt启动N1后，执行df -h查看u盘和emmc分区的挂载，然后将u盘分区的内容复制到emmc分区
 
 * df -h                   #查看u盘的root分区 (/mnt/sda2),  mmc的root分区（/mnt/mmcblk1p2）
 * rm -rf /mnt/mmcblk1p2/*

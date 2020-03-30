@@ -20,7 +20,16 @@
 执行bash mk.sh, 默认输出路径"out/xxx.img"
 写入U盘 / 线刷 启动OpenWrt
 
-* 写入N1的emmc方法：u盘启动openwrt后，执行df -h查看u盘和emmc分区的挂载，然后将u盘分区的内容复制到emmc分区
+* 写入N1的emmc方法：
+此时N1的emmc内必须是armbian系统。
+如果是荒野无灯的小钢炮系统，则需要先将小钢炮还原为android再写入armbian。具体过程如下：制作armbian 5.77启动U盘，然后U盘启动N1，用ddbr方法刷回降级的android（https://luotianyi.vc/1346.html） ；然后拔出U盘。N1关机再以android开机，找到N1 android系统的ip地址，比如192.168.50.223。在windows的android-adb-fastboot_1.0.39工具文件夹，执行
+.\adb.exe connect 192.168.50.223  
+.\adb.exe shell reboot update
+两条命令后，N1 android自动重启进入U盘引导模式，在N1的灯灭掉再亮的一瞬间插入U盘（不要过早插入armbian U盘），进入U盘armbian5.77系统，运行
+nand-sata-install
+命令将U盘的armbian5.77写入N1的emmc内。
+
+u盘启动openwrt后，执行df -h查看u盘和emmc分区的挂载，然后将u盘分区的内容复制到emmc分区
 
 * df -h                   #查看u盘的root分区 (/mnt/sda2),  mmc的root分区（/mnt/mmcblk1p2）
 * rm -rf /mnt/mmcblk1p2/*
